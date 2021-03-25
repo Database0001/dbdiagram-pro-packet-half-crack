@@ -119,8 +119,23 @@ $.dos = {
                 }
             }
         }
+    },
 
+    deleteTables: function () {
+
+        $('.table .table-header').removeAttr('style');
+
+        for (var [index, s] of iterate_object($.cookie.getCookie())) {
+            let item = s.split(",");
+            if (document.URL == item[0]) {
+                if (index.search('table|') > -1) {
+                    $.cookie.deleteCookie(index);
+                }
+            }
+        }
+        $.dos.events();
     }
+
 };
 
 
@@ -172,14 +187,7 @@ function shareCrackTableColor() {
 
 function importTableColorCode() {
 
-    for (var [index, s] of iterate_object($.cookie.getCookie())) {
-        let item = s.split(",");
-        if (document.URL == item[0]) {
-            if (index.search('table|') > -1) {
-                $.cookie.deleteCookie(index);
-            }
-        }
-    }
+    $.dos.deleteTables();
 
     let code = $('#table-color-code');
 
@@ -198,7 +206,7 @@ function importTableColorCode() {
         $.cookie.setCookie(val[0], result);
     });
 
-    location.reload();
+    $.dos.events();
 }
 
 function initLang() {
