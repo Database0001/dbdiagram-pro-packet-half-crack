@@ -226,7 +226,6 @@ function initLang() {
 }
 
 function setLang(lang = "tr") {
-    console.log(lang);
     if ($.lang[lang]) {
         $.cookie.deleteCookie('lang');
         $.cookie.setCookie('lang', lang);
