@@ -11,7 +11,8 @@ Features:
 	Share your colors codes
 	Load your colors codes
 	Language (tr, en)
-
+	Fast loading
+	
 How to use:
 
 	If you using Google Chrome you should do install a javascript injector extension
