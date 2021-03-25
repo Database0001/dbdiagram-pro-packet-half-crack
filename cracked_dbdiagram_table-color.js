@@ -107,6 +107,10 @@ $.dos = {
             $.dos.restart();
         });
 
+        $.dos.loadTables();
+    },
+
+    loadTables: function () {
         for (var [index, s] of iterate_object($.cookie.getCookie())) {
             let item = s.split(",");
             if (document.URL == item[0]) {
@@ -133,7 +137,7 @@ $.dos = {
                 }
             }
         }
-        $.dos.events();
+        $.dos.loadTables();
     }
 
 };
@@ -206,7 +210,7 @@ function importTableColorCode() {
         $.cookie.setCookie(val[0], result);
     });
 
-    $.dos.events();
+    $.dos.loadTables();
 }
 
 function initLang() {
@@ -226,9 +230,9 @@ function setLang(lang = "tr") {
     if ($.lang[lang]) {
         $.cookie.deleteCookie('lang');
         $.cookie.setCookie('lang', lang);
-        initLang($.lang[$.cookie.getCookie('lang')]["not_there_are_lang"]);
+        initLang(lang);
     } else {
-        alert();
+        alert($.lang[$.cookie.getCookie('lang')]["not_there_are_lang"]);
     }
 }
 
