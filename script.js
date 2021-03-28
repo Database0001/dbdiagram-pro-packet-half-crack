@@ -110,6 +110,7 @@ $.dos = {
                     $.cookie.setCookie(`table|${table_name}`, [document.URL, color]);
                 });
             });
+
             $.dos.events();
         }, 200);
     },
@@ -188,7 +189,7 @@ $(function () {
             }
 
             $.dos.restart();
-        }, 300);
+        }, 500);
     }
 });
 
