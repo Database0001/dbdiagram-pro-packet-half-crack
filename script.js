@@ -65,6 +65,7 @@ $.dos = {
             $('circle').off();
             $('.close-wrapper').off();
             $('.modal-close').off();
+            $('.ace_text-input').off('input');
 
             ['.close-wrapper', '.modal-close'].forEach(function (item, index) {
                 $(item).on('click', function () {
@@ -75,6 +76,10 @@ $.dos = {
 
                     $.dos.restart();
                 });
+            });
+
+            $('.ace_text-input').on('input', function () {
+                $.dos.events();
             });
 
             $('.table').each(function (index, s) {
