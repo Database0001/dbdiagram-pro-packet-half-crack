@@ -250,6 +250,7 @@ leftMenu.append(`
     <button onclick="shareCrackTableColor();" class="btn btn-danger ml-2 mr-3 text-light" data-lang="share_colors"></button>
     <input type="text" placeholder="" style="width: 250px !important;" id="table-color-code" class="form-control text-dark" data-lang="input_code">
     <button onclick="importTableColorCode();" class="btn btn-success ml-1 text-light" data-lang="input"></button>
+    <button onclick="$.dos.events();" class="btn btn-dark ml-1 text-light" data-lang="fix">Fix</button>
 `);
 
 for (var [index, item] of iterate_object($.lang)) {
