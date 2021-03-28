@@ -2,7 +2,7 @@
 
 https://dbdiagram.io/
 
-pro packet half crack
+pro packet half crack FOR NON-API-MODE (non-api-mode: self do not connect any three part software)
 
 Features:
 
@@ -21,3 +21,4 @@ How to use:
 https://chrome.google.com/webstore/detail/custom-javascript-for-web/ddbjnfjiigjmcpcpkmhogomapikjbjdk this extension absolutely working on this	
 
 	Copy code and paste in Injector and save the code and refresh page TADAAAA is working...
+	if you see any problem click to (Fix | Düzelt) button
