@@ -1,5 +1,3 @@
-$('.loading-overlay').remove();
-
 $.lang = {
     tr: {
         share_colors: "Renkleri paylaş",
@@ -62,7 +60,18 @@ function* iterate_object(o) {
 
 $.dos = {
     restart: function () {
+        $('.loading-overlay').remove();
+
+        $('body').off('keydown');
+
+        $('body').on('keydown', function (e) {
+            if (e.ctrlKey == true && e.key == "s") {
+                $.dos.restart();
+            }
+        });
+
         setTimeout(function () {
+
             $('.table').off();
             $('circle').off();
             $('.close-wrapper').off();
