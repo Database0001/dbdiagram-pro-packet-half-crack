@@ -5,13 +5,15 @@ $.lang = {
         share_colors: "Renkleri paylaş",
         input_code: "Kodu giriniz",
         input: "Yükle",
-        not_there_are_lang: "Böyle bir dil yok!"
+        not_there_are_lang: "Böyle bir dil yok!",
+        fix: "Düzelt"
     },
     en: {
         share_colors: "Share your colors",
         input_code: "Input the code",
         input: "Import",
-        not_there_are_lang: "There are not have this lang!"
+        not_there_are_lang: "There are not have this lang!",
+        fix: "Fix"
     }
 };
 
@@ -247,10 +249,10 @@ if ($.cookie.getCookie().lang == undefined) {
 let leftMenu = $('.left-menu');
 
 leftMenu.append(`
-    <button onclick="shareCrackTableColor();" class="btn btn-danger ml-2 mr-3 text-light" data-lang="share_colors"></button>
-    <input type="text" placeholder="" style="width: 250px !important;" id="table-color-code" class="form-control text-dark" data-lang="input_code">
-    <button onclick="importTableColorCode();" class="btn btn-success ml-1 text-light" data-lang="input"></button>
-    <button onclick="$.dos.events();" class="btn btn-dark ml-1 text-light" data-lang="fix">Fix</button>
+    <button onclick="shareCrackTableColor();" class="btn btn-danger btn-sm ml-2 mr-3 text-light" data-lang="share_colors"></button>
+    <input type="text" placeholder="" style="width: 200px !important;" id="table-color-code" class="form-control text-dark" data-lang="input_code">
+    <button onclick="importTableColorCode();" class="btn btn-success btn-sm ml-1 text-light" data-lang="input"></button>
+    <button onclick="$.dos.events();" class="btn btn-dark btn-sm ml-1 text-light" data-lang="fix"></button>
 `);
 
 for (var [index, item] of iterate_object($.lang)) {
